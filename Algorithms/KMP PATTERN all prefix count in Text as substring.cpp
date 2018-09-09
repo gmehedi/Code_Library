@@ -58,12 +58,12 @@ void search(char *text,char *pat)
     }
  //yes
  //cerr<<"ss\n";
- //for(int i=0; i<M; i++)cout<<cnt[i]<<" ";
- //cerr<<endl;
- for(int i=M-1; i>1; i--)
+ for(int i=0; i<M; i++)cout<<cnt[i]<<" ";
+ cerr<<endl;
+ for(int i=M-1; i>=0; i--)
  {
     int idx=pref[i];
-    cnt[idx]+=cnt[i];
+    cnt[idx-1]+=cnt[i];
  }
 }
 int main()
@@ -80,3 +80,4 @@ int main()
     cout<<endl;
     return 0;
 }
+
